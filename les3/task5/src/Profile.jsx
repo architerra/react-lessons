@@ -2,7 +2,7 @@ import React from 'react';
 import './comment.scss';
 import moment from 'moment';
 
-const formatDate = date => moment(date).format('DD MMM YYYY');
+const formatDate = date => moment(date).format('DD MMM YY');
 
 function Profile(props) {
   return (
