@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Counter extends Component {
+class Colors extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,14 +29,14 @@ class Counter extends Component {
 
   render() {
     return (
-      <div class="counter">
-        <button data-action="decrease" className="counter__button" onClick={this.decrement}>
+      <div class="colors">
+        <button data-action="decrease" class="counter__button" onClick={this.decrement}>
           -
         </button>
-        <span className="counter__value" onClick={() => this.reset()}>
+        <span class="counter__value" onClick={() => this.reset()}>
           {this.state.counter}
         </span>
-        <button data-action="increase" className="counter__button" onClick={this.increment}>
+        <button data-action="increase" class="counter__button" onClick={this.increment}>
           +
         </button>
       </div>
@@ -44,4 +44,4 @@ class Counter extends Component {
   }
 }
 
-export default Counter;
+export default Colors;
