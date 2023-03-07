@@ -20,17 +20,17 @@ class ColorPicker extends Component {
         <div class="picker__title">{this.state.text}</div>
         <div>
           <button
-            class="picker__button picker__button_coral"
+            className="picker__button picker__button_coral"
             onMouseOver={() => this.setText('coral')}
             onMouseLeave={() => this.setText('')}
           ></button>
           <button
-            class="picker__button picker__button_aqua"
+            className="picker__button picker__button_aqua"
             onMouseOver={() => this.setText('aqua')}
             onMouseLeave={() => this.setText('')}
           ></button>
           <button
-            class="picker__button picker__button_bisque"
+            className="picker__button picker__button_bisque"
             onMouseOver={() => this.setText('bisque')}
             onMouseLeave={() => this.setText('')}
           ></button>
