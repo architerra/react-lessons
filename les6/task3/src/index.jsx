@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import GoodButton from './GoodButton.jsx';
+import Page from './Page.jsx';
 
 const rootElement = document.querySelector('#root');
 
-ReactDOM.render(<GoodButton />, rootElement);
+ReactDOM.render(<Page />, rootElement);
