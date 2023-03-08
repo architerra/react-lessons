@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const Logout = () => {
-  return <h1>Hi stranger. Please login 🚀</h1>;
+  return <button onClick={this.onLogout}>Logout</button>;
 };
 
 export default Logout;
