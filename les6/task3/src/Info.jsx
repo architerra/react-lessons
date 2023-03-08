@@ -4,7 +4,7 @@ const Info = ({ text }) => {
   if (!text) {
     return null;
   }
-  return <div className="message">{text}</div>;
+  return <div className="info">{text}</div>;
 };
 
 export default Info;
