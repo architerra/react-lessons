@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Greeting from './Greeting';
+import Spinner from './Spinner';
 import Login from './Login';
 import Logout from './Logout.jsx';
 
@@ -8,32 +8,39 @@ class Auth extends Component {
     super(props);
     this.state = {
       isLoggedIn: false,
+      spinner: false,
     };
   }
-
-  onLogin = () => {
+  handleLogoinClick = () => {
     this.setState({
-      isLoggedIn: true,
+      spinner: true,
     });
+    setTimeout(
+      () =>
+        this.setState({
+          isLoggedIn: true,
+          spinner: false,
+        }),
+      2000,
+    );
   };
-
-  onLogout = () => {
+  handleLogoutClick = () => {
     this.setState({
       isLoggedIn: false,
     });
   };
-
   render() {
-    return (
-      <div className="panel">
-        <Greeting isLoggedIn={this.state.isLoggedIn} />
-        {this.state.isLoggedIn ? (
-          <Logout onLogout={this.onLogout} />
-        ) : (
-          <Login onLogin={this.onLogin} />
-        )}
-      </div>
-    );
+    let button;
+    if (this.state.isLoggedIn) {
+      button = <Logout onLogout={this.handleLogoutClick} />;
+    } else {
+      button = this.state.spinner ? (
+        <Spinner size={'45px'} />
+      ) : (
+        <Login onLogin={this.handleLogoinClick} />
+      );
+    }
+    return <>{button}</>;
   }
 }
 
