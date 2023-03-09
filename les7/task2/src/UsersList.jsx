@@ -25,10 +25,10 @@ class UsersList extends Component {
     }
     return (
       <div>
-        <button class="btn" onClick={this.toggleSorting}>
+        <button className="btn" onClick={this.toggleSorting}>
           {this.state.sorting || '-'}
         </button>
-        <ul class="users">
+        <ul className="users">
           {usList.map(user => (
             <User key={user.id} {...user} />
           ))}
