@@ -10,6 +10,7 @@ class Dimensions extends Component {
       width: innerWidth,
       height: innerHeight,
     };
+    document.title = `${innerWidth} x ${innerHeight}`;
   }
 
   componentDidMount() {
