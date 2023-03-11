@@ -26,13 +26,13 @@ class ConnectionStatus extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListenerr('offline', e => {
+    window.removeEventListener('offline', e => {
       this.setState({
         statusNav: false,
         text: 'offline',
       });
     });
-    window.removeEventListenerr('online', e => {
+    window.removeEventListener('online', e => {
       this.setState({
         statusNav: true,
         text: 'online',
@@ -41,7 +41,6 @@ class ConnectionStatus extends Component {
   }
 
   render() {
-    console.log(this.state.text);
     return (
       <div className={`status${this.state.statusNav === false ? ' status_offline' : ''}`}>
         {`${this.state.text}`}
