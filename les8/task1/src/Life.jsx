@@ -25,7 +25,7 @@ class Life extends Component {
 
   render() {
     console.log('return React element to build DOM');
-    return <div>Hello, World!</div>;
+    return <div>{`Hello, ${this.props.text}!`}</div>;
   }
 }
 
