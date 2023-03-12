@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class UserForm extends Component {
   state = {
     name: '',
-    student: '',
+    student: false,
     occupation: '',
     about: '',
   };
@@ -16,14 +16,18 @@ class UserForm extends Component {
     });
   };
 
-  onSubmit = event => {
+  handleSubmit = event => {
     event.preventDefault();
-    console.log(this.state);
+    this.props.onSubmit(this.state);
+  };
+
+  onSubmit = props => {
+    this.handleSubmit(props);
   };
 
   render() {
     return (
-      <form className="login-form" onSubmit={this.onSubmit}>
+      <form className="login-form" onSubmit={this.handleSubmit}>
         <h1 className="form-title">Profile</h1>
 
         <div className="form-control">
