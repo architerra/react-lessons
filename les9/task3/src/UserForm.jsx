@@ -8,10 +8,11 @@ class UserForm extends Component {
       {},
     );
     // console.log(formData);
+    this.props.onSubmit(this.formData);
   };
 
   onSubmit = props => {
-    this.handleSubmit(props);
+    this.handleSubmit(this.props);
   };
 
   setRef = node => {
