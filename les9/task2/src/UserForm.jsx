@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
 
 class UserForm extends Component {
-  state = {
-    name: '',
-    student: false,
-    occupation: '',
-    about: '',
-  };
-
   handleChange = event => {
     const { name, value, checked, type } = event.target;
     const val = type === 'checkbox' ? checked : value;
