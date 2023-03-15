@@ -5,17 +5,16 @@ import Filter from './Filter';
 
 class UsersList extends Component {
   state = {
-    filter: 'O',
+    filter: '',
   };
 
   filtredList = this.props.users.filter(user => {
     return user.name.toLowerCase().includes(this.state.filter.toLowerCase());
   });
 
-  handleChange(event) {
-    this.setState({ filter: event.target.filterText });
-    console.log(this.state.filter);
-  }
+  handleChange = event => {
+    this.setState({ filter: event.target.value });
+  };
 
   render() {
     return (

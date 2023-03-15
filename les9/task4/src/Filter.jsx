@@ -16,11 +16,12 @@ class Filter extends Component {
   //     this.setState({ value: event.target.value });
   //   }
 
-  //   onChange = props => {
-  //     this.handleChange(props);
-  //   };
+  onChange = props => {
+    this.handleChange(props);
+  };
 
   render() {
+    // console.log(this.props.filterText);
     return (
       <>
         <div className="filter">
