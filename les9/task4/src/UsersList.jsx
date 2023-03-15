@@ -8,24 +8,27 @@ class UsersList extends Component {
     filter: '',
   };
 
-  filtredList = this.props.users.filter(user => {
-    return user.name.toLowerCase().includes(this.state.filter.toLowerCase());
-  });
-
   handleChange = event => {
     this.setState({ filter: event.target.value });
   };
 
+  // filteredList = this.props.users.filter(user => {
+  //   return user.name.toLowerCase().includes(this.state.filter.toLowerCase());
+  // });
+
   render() {
+    const filteredList = this.props.users.filter(user => {
+      return user.name.toLowerCase().includes(this.state.filter.toLowerCase());
+    });
     return (
       <div>
         <Filter
-          count={this.filtredList.length}
+          count={filteredList.length}
           onChange={this.handleChange}
           filterText={this.state.filter}
         />
         <ul className="users">
-          {this.filtredList.map(user => (
+          {filteredList.map(user => (
             <User key={user.id} {...user} />
           ))}
         </ul>
