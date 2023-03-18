@@ -23,7 +23,7 @@ class Expand extends Component {
   render() {
     const content = this.state.isOpen && this.props.children;
     const down = !this.state.isOpen && (
-      <i class="fas fa-chevron-down" onClick={this.showContent}>
+      <i className="fas fa-chevron-down" onClick={this.showContent}>
         -\/-
       </i>
     );
