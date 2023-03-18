@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+// import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Expand extends Component {
   state = {
@@ -25,10 +25,14 @@ class Expand extends Component {
       <div className="expand__content">{this.props.children}</div>
     );
     const down = !this.state.isOpen && (
-      <FontAwesomeIcon icon={faChevronDown} onClick={this.showContent} />
+      <i class="fas fa-chevron-up" onClick={this.showContent}>
+        \/
+      </i>
     );
     const up = this.state.isOpen && (
-      <FontAwesomeIcon icon={faChevronUp} onClick={this.hideContent} />
+      <i class="fas fa-chevron-up" onClick={this.hideContent}>
+        /\
+      </i>
     );
 
     return (
