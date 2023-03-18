@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-// import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
-// import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Expand extends Component {
   state = {
@@ -25,14 +22,10 @@ class Expand extends Component {
       <div className="expand__content">{this.props.children}</div>
     );
     const down = !this.state.isOpen && (
-      <i className="fa-solid fa-chevron-down" onClick={this.showContent}>
-        
-      </i>
+      <i className="fas fa-chevron-down" onClick={this.showContent}></i>
     );
     const up = this.state.isOpen && (
-      <i className="fa-solid fa-chevron-up" onClick={this.hideContent}>
-        
-      </i>
+      <i className="fas fa-chevron-up" onClick={this.hideContent}></i>
     );
 
     return (
