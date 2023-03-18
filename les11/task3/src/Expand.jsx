@@ -21,15 +21,17 @@ class Expand extends Component {
   };
 
   render() {
-    const content = this.state.isOpen && this.props.children;
+    const content = this.state.isOpen && (
+      <div className="expand__content">{this.props.children}</div>
+    );
     const down = !this.state.isOpen && (
-      <i className="fas fa-chevron-down" onClick={this.showContent}>
-        -\/-
+      <i className="fas fa-chevron-up" onClick={this.showContent}>
+        \/
       </i>
     );
     const up = this.state.isOpen && (
       <i className="fas fa-chevron-up" onClick={this.hideContent}>
-        _/\_
+        /\
       </i>
     );
 
@@ -42,7 +44,7 @@ class Expand extends Component {
             {up}
           </button>
         </div>
-        <div className="expand__content">{content}</div>
+        {content}
       </div>
     );
   }
