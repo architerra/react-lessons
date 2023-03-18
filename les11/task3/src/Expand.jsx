@@ -25,7 +25,7 @@ class Expand extends Component {
       <div className="expand__content">{this.props.children}</div>
     );
     const down = !this.state.isOpen && (
-      <i class="fas fa-chevron-up" onClick={this.showContent}>
+      <i class="fas fa-chevron-down" onClick={this.showContent}>
         -\/-
       </i>
     );
