@@ -26,12 +26,12 @@ class Expand extends Component {
     );
     const down = !this.state.isOpen && (
       <i class="fas fa-chevron-up" onClick={this.showContent}>
-        \/
+        -\/-
       </i>
     );
     const up = this.state.isOpen && (
       <i class="fas fa-chevron-up" onClick={this.hideContent}>
-        /\
+        _/\_
       </i>
     );
 
