@@ -33,12 +33,6 @@ class Expand extends Component {
         <div className="expand__header">
           <span className="expand__title">{this.props.title}</span>
           <button className="expand__toggle-btn">
-            <link
-              rel="stylesheet"
-              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-              integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
-              crossorigin="anonymous"
-            />
             {down}
             {up}
           </button>
