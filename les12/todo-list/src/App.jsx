@@ -1,19 +1,8 @@
-import React, { Component } from 'react';
-import Expand from './Expand';
+import React from 'react';
+import TodoList from './TodoList';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="app">
-        <Expand title="Some title">
-          <p>
-            Hooks are a new addition in React 16.8. They let you use state and other React features
-            without writing a class.
-          </p>
-        </Expand>
-      </div>
-    );
-  }
-}
+const App = () => {
+  return <TodoList />;
+};
 
 export default App;
