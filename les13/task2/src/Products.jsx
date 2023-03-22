@@ -2,23 +2,23 @@ import React from 'react';
 import { Link, Switch, Route } from 'react-router-dom';
 import Product from './Product';
 
-function Products() {
+function Products({ match }) {
   return (
     <div className="page__content">
       <h1>Products</h1>
       <ul clasName="navigation">
         <li className="navigation__item">
-          <Link to="/products/book">Book</Link>
+          <Link to={`${match.url}/book`}>Book</Link>
         </li>
         <li className="navigation__item">
-          <Link to="/products/ball">Ball</Link>
+          <Link to={`${match.url}/ball`}>Ball</Link>
         </li>
       </ul>
       <Switch>
-        <Route exact path="products">
+        <Route exact path={match.url}>
           <span>Select a product please</span>
         </Route>
-        <Route path="/products/:productId" component={Product} />
+        <Route path={`${match.url}/:productId`} component={Product} />
       </Switch>
     </div>
   );
