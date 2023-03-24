@@ -4,7 +4,7 @@ const Counter = () => {
   const [counter, setCounter] = useState(0);
 
   return (
-    <div class="counter">
+    <div className="counter">
       <button
         data-action="decrease"
         className="counter__button"
