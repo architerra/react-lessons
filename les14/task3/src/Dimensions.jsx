@@ -27,13 +27,6 @@ const Dimensions = () => {
       window.removeEventListener('resize', onResize);
     };
   }, []);
-  // componentDidMount() {
-  //   window.addEventListener('resize', this.onResize);
-  // }
-
-  // componentWillUnmount() {
-  //   window.removeEventListener('resize', this.onResize);
-  // }
 
   const { width, height } = dimensions;
   return <div className="dimensions">{`${width}px - ${height}px`}</div>;
